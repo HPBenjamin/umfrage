@@ -2,3 +2,32 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.site {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+.mat-card {
+    width: 350px;
+
+    h2 {
+        color: darkgray;
+    }
+
+    .mat-raised-button {
+        margin-left: 0px;
+        margin-top: 16px;
+    }
+
+    .mat-radio-label-content {
+        padding-left: 2px;
+        padding-right: 15px;
+    }
+}
+
+}
