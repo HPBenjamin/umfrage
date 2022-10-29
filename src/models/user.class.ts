@@ -9,6 +9,14 @@ export class User {
         this.vacation = obj ? obj.vacation : '';
         this.color = obj ? obj.color : '';
         this.car = obj ? obj.car : '';
+     }
 
+     public toJSON() {
+      return {
+         email: this.email,
+         vacation: this.vacation,
+         color: this.color,
+         car: this.car
+      };
      }
 }

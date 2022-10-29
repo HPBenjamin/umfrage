@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/models/user.class';
 import { Router } from '@angular/router';
-
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-user',
@@ -11,11 +11,18 @@ import { Router } from '@angular/router';
 export class UserComponent implements OnInit {
   user: User = new User();
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private firestore: AngularFirestore) { }
 
     saveEmail() {
       console.log('currentUser is', this.user.email);
       this.router.navigateByUrl('/dialog-first');
+
+      this.firestore
+        .collection('users')
+        .add(this.user.toJSON())
+        .then((result: any) => {
+          console.log('Adding user finished', result);
+        })
      
     }
 
