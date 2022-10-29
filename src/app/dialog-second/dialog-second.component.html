@@ -1,14 +1,13 @@
 <div class="site">
     <mat-card><h1>Umfrage</h1>
-      <h2>Welches Urlaubsland bevorzugen Sie?</h2>
-      <mat-radio-group aria-label="Select an option">
+      <h2>Welches Urlaubsland bevorzugst Du?</h2>
+      <mat-radio-group aria-label="Select an option" [(ngModel)]="user.vacation">
         <mat-radio-button value="1">Spanien</mat-radio-button>
         <mat-radio-button value="2">Portugal </mat-radio-button>
         <mat-radio-button value="3">Griechenland </mat-radio-button>
         <mat-radio-button value="4">Norwegen </mat-radio-button>
       </mat-radio-group>
-      <a href="/dialog-third" routerLinkActive="active">
-        <button mat-raised-button color="accent">weiter</button>
-      </a>
+        <button (click)="saveVacation()" mat-raised-button color="accent">weiter
+        </button>
     </mat-card>
     </div>

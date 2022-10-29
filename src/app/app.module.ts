@@ -11,7 +11,13 @@ import { DialogFirstComponent } from './dialog-first/dialog-first.component';
 import { DialogSecondComponent } from './dialog-second/dialog-second.component';
 import { DialogThirdComponent } from './dialog-third/dialog-third.component';
 import { MatRadioModule } from '@angular/material/radio';
-
+import { UserComponent } from './user/user.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 @NgModule({
   declarations: [
@@ -19,6 +25,7 @@ import { MatRadioModule } from '@angular/material/radio';
     DialogFirstComponent,
     DialogSecondComponent,
     DialogThirdComponent,
+    UserComponent,
    
   ],
   imports: [
@@ -28,8 +35,13 @@ import { MatRadioModule } from '@angular/material/radio';
     MatCardModule,
     MatChipsModule,
     MatButtonModule,
-    MatRadioModule
-    
+    MatRadioModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    AngularFireModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

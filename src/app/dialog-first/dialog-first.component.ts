@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from 'src/models/user.class';
 
 @Component({
   selector: 'app-dialog-first',
@@ -6,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dialog-first.component.scss']
 })
 export class DialogFirstComponent implements OnInit {
+  user: User = new User();
+   carNumber = 0;
+    
+  constructor(private router: Router) { }
 
-  constructor() { }
+  saveCar() {
+    console.log('value =', this.user.car);
+    this.router.navigateByUrl('/dialog-second')
+    
+  }
 
   ngOnInit(): void {
   }

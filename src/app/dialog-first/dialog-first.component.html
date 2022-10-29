@@ -1,14 +1,13 @@
 <div class="site">
   <mat-card>
-    <h1>Umfrage</h1>
-      <mat-radio-group aria-label="Select an option">
-        <mat-radio-button value="1">AUDI </mat-radio-button>
-        <mat-radio-button value="2">BMW </mat-radio-button>
+    <h1>Welches ist Dein Lieblingsauto?</h1>
+      <mat-radio-group aria-label="Select an option" labelPosition="before" [(ngModel)]="user.car">
+        <mat-radio-button value="1"></mat-radio-button>
+        <mat-radio-button value="2" >BMW </mat-radio-button>
         <mat-radio-button value="3">Mercedes </mat-radio-button>
         <mat-radio-button value="4">Porsche </mat-radio-button>
       </mat-radio-group>
-      <a href="/dialog-second" routerLinkActive="active">
-        <button mat-raised-button color="accent">weiter</button>
-      </a>
+        <button (click)="saveCar()" mat-raised-button color="accent">weiter</button>
   </mat-card>
+  
 </div>

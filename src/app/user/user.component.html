@@ -1,0 +1,13 @@
+<div class="site">
+  <mat-card>
+    <h2>Um zur Umfrage zu gelangen, gib Deine E-Mail ein</h2>
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input [(ngModel)]="user.email" matInput placeholder="pat@example.com">
+      </mat-form-field>
+    </div>
+      <button (click)="saveEmail()" mat-raised-button color="accent">weiter</button>
+    
+  </mat-card>
+</div>

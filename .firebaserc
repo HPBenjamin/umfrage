@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "umfrage-98b43": {
+      "hosting": {
+        "umfrage": [
+          "umfrage-98b43"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "umfrage-98b43"
+  }
+}
