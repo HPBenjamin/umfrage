@@ -15,9 +15,7 @@ import { UserComponent } from './user/user.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import { AngularFireModule } from '@angular/fire/compat';
-import { environment } from '../environments/environment';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 
 @NgModule({
   declarations: [
@@ -39,9 +37,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    AngularFireModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
